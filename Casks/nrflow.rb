@@ -5,11 +5,11 @@ cask "nrflow" do
   on_macos do
     on_intel do
       url "https://github.com/nrflow/nrflow/releases/download/v#{version}/nrflow_#{version}_darwin_amd64.tar.gz"
-      sha256 "a5d0bbfbc3296fa10a3a7c3f6213ec1f98229c5986d6e65b8fe3b42157513928"
+      sha256 "7d2034c496f5cec2824213b7c7d8fbc5d9922ce7ac12f20ca8ae67348be5b090"
     end
     on_arm do
       url "https://github.com/nrflow/nrflow/releases/download/v#{version}/nrflow_#{version}_darwin_arm64.tar.gz"
-      sha256 "e9fb36932fb0c1f8ccc0f2ad2fa2b64b3187ffff3480465b4380b4f1fc3d522b"
+      sha256 "6b9e6f0c9813d771f7d1a6e43863149884bf2d69e7970afd84f9dff38aa0740e"
     end
   end
 
@@ -23,6 +23,10 @@ cask "nrflow" do
 
   binary "nrflow"
   binary "nrflow_server"
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}"]
+  end
 
   # No zap stanza required
 
