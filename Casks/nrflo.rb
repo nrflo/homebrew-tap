@@ -4,22 +4,22 @@ cask "nrflo" do
 
   on_macos do
     on_intel do
-      sha256 "7375904b85c3c48cd103aa2a83fafc138ebeca0e746b76d9380c1b7d71c58a16"
+      sha256 "9b28260a6f4cb89d285416356e165d9f5b4109626986ead304836ed6ffb7c525"
       url "https://github.com/nrflo/nrflo/releases/download/v#{version}/nrflo_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "d0240ad555a9d78849c8040330be3adf3127f2b817fe6acb735de36d500a76df"
+      sha256 "ba08883df7b1b692325662eb850e0ba1e424e46bd36f65fd4ee83969ca292390"
       url "https://github.com/nrflo/nrflo/releases/download/v#{version}/nrflo_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "aa9c66ee5af76dd19308f90aa0198d7a842a6a9c6f213cc80b0e601a2041fc9a"
+      sha256 "5b4557637b7e5badefd37cdef0ab63d14a4c384a3b36bf8b0064c762ec35cf75"
       url "https://github.com/nrflo/nrflo/releases/download/v#{version}/nrflo_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "71b6f592dbd5aa796845950779bf2d9a0939a9311a1b92297311cb24331fbb22"
+      sha256 "51e09ac7771e76a8d4b55ed47eeb657b7ee18f5c354bff66c4cd952db017648c"
       url "https://github.com/nrflo/nrflo/releases/download/v#{version}/nrflo_#{version}_linux_arm64.tar.gz"
     end
   end
